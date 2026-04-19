@@ -1,0 +1,138 @@
+// HOMEPAGE
+
+Hi, I'm Mila Klingbeil
+
+Look around!
+
+
+
+// ABOUT
+
+Mila Mai Blum Klingbeil 
+Bachelor of Arts in Communication Design at HTW Berlin (ongoing, 4th semester)
+
+
+//Contact
+
+milamaiblum@gmail.com
++49 15233730752
+
+Oderberger Str.3
+10435 Berlin 
+
+
+
+// WORK
+
+// Klangkeller
+
+During my main project, I collaborated with the Museum of Musical
+Instruments in Berlin on the development of KlangKeller (German 
+for “Sound Cellar”) — a new interactive sound playground for children
+and young people. The goal was to transform the experience of musical
+instruments from passive observation into active exploration and play.
+
+Within this project, I was part of the Visual Branding and Navigation group.
+My focus was on defining how visitors could be guided to the KlangKeller
+and how the space’s visual identity could both fit the existing museum
+architecture and introduce a fresh, contemporary atmosphere that would
+spark curiosity among younger audiences.
+
+My concept centered on the idea of circles — inspired by architectural 
+elements and musical notation, particularly note heads. These circular 
+shapes became the key element of the visual system, forming a kind of 
+trail that leads visitors through the museum toward the KlangKeller. 
+I worked on developing this wayfinding concept, designing signage that 
+integrates new information seamlessly into the museum, and creating 
+proposals for how the visual language could extend into the space itself.
+
+We had the opportunity to build and test parts of the design within the 
+museum, which allowed me to evaluate how the navigation elements 
+functioned in the real environment and to refine the visual identity 
+accordingly.
+
+
+// Tacker
+
+As part of a university module, the short film "TACKER" emerged from 
+a collaborative group project—a cinematic exploration of a claustrophobic,
+dystopian future. The project focuses on the visual staging of a world
+where societal structures and individual freedom are pushed to their limits.
+Within the large project group, I was primarily responsible for the visual
+world of "TACKER"; my focus was on location and set design.
+
+
+// Trash of Berlin Match
+
+Trash of Berlin MATCH was created in direct collaboration with an artist
+who photographs discarded objects lying on the street.
+
+These unique images of urban "trash" form the complete design foundation.
+Each playing card is an aesthetic fragment from the artist's series, 
+challenging players to find the matching pair in the details of decay. 
+And I turned the photos into a memory game, for which I was responsible
+for the game's design.
+
+
+// Everyday Kitchen Utensils --MISSING MATERIAL
+
+The graphics reveal the aesthetic clarity of everyday kitchen utensils 
+and highlight the often-overlooked beauty and precision of these functional
+objects.
+
+
+// Photo Series: Marzahn
+
+The photo series documents how oases emerge amidst Marzahn's gray 
+concrete architecture, providing space for community and human 
+togetherness.
+
+
+// Digital Flip-Flap Book
+
+This project is a digitally implemented flip-flap book that divides the anatomy
+and appearance of animals into individual segments, creating an entertaining 
+medium for creative animal combinations through digital handling.
+
+
+// Photo Series: People
+
+The photo series is an intimate visual exploration that portrays the self 
+and the people in one's personal environment, documenting everyday 
+connectedness and interpersonal relationships.
+
+
+// Figma: Timi App
+
+The everyday assistance app Timi was specifically developed for the Apple Watch
+and plans to seamlessly organize the daily routine through the integration of 
+calendar and map data, automatically reminds users of tasks and appointments,
+and accompanies them with unobtrusive situational prompts for an efficient and
+stress-free daily life.
+
+
+// Photo Series: Playground
+
+There are nearly 2000 playgrounds in Berlin. Places that shape city life without
+receiving special attention. I spy with my little eye something you don't 
+see—this is the guiding idea behind the photo series Platzspiel, which directs 
+the gaze toward these everyday urban spaces. During the day, they are full of 
+life, laughter, and movement, but in the early morning hours, when the city is 
+still asleep, they transform. The playground as part of the urban fabric, which
+adults mostly only perceive in passing—as a space between memory, function, and
+forgetting.
+
+
+// Interaction Design: Washing Hands --MISSING MATERIAL
+
+This interaction design uses playful elements and digital design to introduce
+children to the handwashing process in an entertaining and motivating way, 
+thereby promoting adherence to important hygiene measures.
+
+
+// Tacker Shortfilm
+
+This short film was developed in close collaboration with the film team, with a focus on set design and on-site organization.
+The visual atmosphere was shaped through the arrangement of space, objects and materials, supporting the tone and narrative of the film. Working behind the scenes,
+the role involved coordinating practical elements on set and helping to bring the overall vision into a cohesive environment.
+The project highlights an interest in spatial design within a cinematic context, where visual details and structure contribute to the storytelling.

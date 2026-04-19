@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme static {
+  --font-sans: 'Helvetica';
+}
+
+body {
+  background-color: #ffffff;
+}
