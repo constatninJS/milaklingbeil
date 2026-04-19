@@ -1,1 +1,1 @@
-# Hey Hallo ich baue hier gerade eine Website für meine Freundin und übe dabei
+# This is a portfolio website for my wonderful girlfriend. Happy Birthday <3
