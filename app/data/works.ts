@@ -110,7 +110,7 @@ export const works: Work[] = [
   {
     id: 7,
     title: "Digital Flip-Flap-Book",
-    category: "Photography",
+    category: "Interaction Design",
     description: `This project is a digitally implemented flip-flap book that divides the anatomy
                   and appearance of animals into individual segments, creating an entertaining 
                   medium for creative animal combinations through digital handling.`,
