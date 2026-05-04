@@ -9,12 +9,12 @@ export const works: Work[] = [
     description: `Trash of Berlin MATCH was created in direct collaboration with an artist who photographs discarded objects lying on the street.
                   These unique images of urban "trash" form the complete design foundation. Each playing card is an aesthetic fragment from the artist´s series,
                   challenging players to find the matching pair in the details of decay.  And I turned the photos into a memory game, for which I was responsible for the game´s design.`,
-    img: "/works/tob_no_bg2.png",
+    img: "/works/tob_bg-1.jpg",
     images: [
-      "/works/tob_no_bg1.png",
-      "/works/tob_no_bg2.png",
-      "/works/tob_no_bg3.png",
-      "/works/tob_no_bg4.png",
+      "/works/tob_bg-1.jpg",
+      "/works/tob_bg-6.jpg",
+      "/works/tob_bg-7.jpg",
+      "/works/tob_bg-4.jpeg",
     ],
     year: 2025,
   },
@@ -33,6 +33,7 @@ export const works: Work[] = [
       "/works/Marzahn5.jpg",
       "/works/Marzahn3.jpg",
       "/works/Marzahn4.jpg",
+      "/works/Marzahn6.jpg",
     ],
     year: 2025,
   },
@@ -49,6 +50,7 @@ export const works: Work[] = [
       "/works/Menschen1.jpg",
       "/works/Menschen2.jpg",
       "/works/Menschen3.jpg",
+      "/works/Menschen4.jpg",
     ],
     year: 2025,
   },
@@ -80,8 +82,8 @@ export const works: Work[] = [
     description: `This game prototype is a simple labyrinth game developed in Unity.
                   The project focuses on basic gameplay mechanics, navigation and spatial structure,
                   exploring how movement and orientation work within a minimal environment.`,
-    img: "/works/Klingbeil_Mila-Unity.mov",
-    images: ["/works/Klingbeil_Mila-Unity.mov"],
+    img: "/works/labyrinth.mov",
+    images: ["/works/labyrinth.mov"],
     year: 2024,
   },
 
@@ -116,7 +118,7 @@ export const works: Work[] = [
                   medium for creative animal combinations through digital handling.`,
     img: "/works/Mlia Klingbeil_digitales FlipFlapBuch.mov",
     images: [
-      "/works/flip1.jpg",
+      "/works/Mlia Klingbeil_digitales FlipFlapBuch.mov",
       "/works/flip2.jpg",
       "/works/flip3.jpg",
       "/works/flip4.jpg",
@@ -163,5 +165,50 @@ export const works: Work[] = [
       "/works/fitness4.mov",
     ],
     year: 2024,
+  },
+
+  {
+    id: 10,
+    title: "Book Redefinition Project",
+    category: "Editorial Design",
+    description: `For this university project, I redefined The Lost Honor of Katharina Blum by Heinrich Böll
+                  through a structural and interactive design concept. Since the story is about uncovering the 
+                  thread of the narrative and distinguishing between truth and fiction, I introduced a literal 
+                  red thread running through the book. To follow the story, readers must unfold and assemble 
+                  #the pages in the correct order, creating a flip-book-like experience that reflects the process 
+                  of piecing together the narrative.`,
+    img: "/works/roter_faden.jpg",
+    images: [
+      "/works/roter_faden.jpg",
+      "/works/roter_faden-6.jpg",
+      "/works/roter_faden-7.jpg",
+      "/works/roter_faden-8.jpg",
+      "/works/roter_faden-9.jpg",
+    ],
+    year: 2026,
+  },
+
+  {
+    id: 11,
+    title: "Everyday Kitchen Utensils",
+    category: "Illustration",
+    description: `The graphics reveal the aesthetic clarity of everyday kitchen utensils and highlight the often-overlooked 
+                  beauty and precision of these functional objects.`,
+    img: "/works/küche.png",
+    images: [
+      "/works/küche.png",
+      "/works/küche2.png",
+      "/works/küche3.png",
+      "/works/küche4.png",
+      "/works/küche5.png",
+      "/works/küche6.png",
+      "/works/küche7.png",
+      "/works/küche8.png",
+      "/works/küche9.png",
+      "/works/küche10.png",
+      "/works/küche11.png",
+      "/works/küche12.png",
+    ],
+    year: 2025,
   },
 ];

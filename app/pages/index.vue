@@ -6,6 +6,8 @@ const hoveredWork = ref(null)
 const selectedWork = ref(null)
 const zoomedMedia = ref(null)
 const zoomedIsVideo = ref(false)
+const mediaList = ref([])
+const mediaIndex = ref(0)
 const sortKey = ref(null)
 const sortDir = ref(1)
 
@@ -17,9 +19,27 @@ function isVideo(src) {
   return src?.endsWith('.mp4') || src?.endsWith('.mov')
 }
 
-function openMedia(src) {
+function openMedia(src, index, images) {
+  mediaList.value = images
+  mediaIndex.value = index
   zoomedMedia.value = src
   zoomedIsVideo.value = isVideo(src)
+}
+
+function prevMedia() {
+  if (mediaIndex.value > 0) {
+    mediaIndex.value--
+    zoomedMedia.value = mediaList.value[mediaIndex.value]
+    zoomedIsVideo.value = isVideo(zoomedMedia.value)
+  }
+}
+
+function nextMedia() {
+  if (mediaIndex.value < mediaList.value.length - 1) {
+    mediaIndex.value++
+    zoomedMedia.value = mediaList.value[mediaIndex.value]
+    zoomedIsVideo.value = isVideo(zoomedMedia.value)
+  }
 }
 
 function toggleSort(key) {
@@ -47,7 +67,6 @@ function rowIsActive(work) {
   if (hoveredWork.value) return hoveredWork.value.id === work.id
   return true
 }
-
 </script>
 
 <template>
@@ -149,10 +168,10 @@ function rowIsActive(work) {
               </div>
               <div class="grid grid-cols-2 gap-2">
                 <template v-for="(src, i) in work.images" :key="i">
-                  <video v-if="isVideo(src)" :src="src" muted loop controls
-                    class="w-full h-32 object-contain cursor-pointer" @click.stop="openMedia(src)" />
+                  <video v-if="isVideo(src)" :src="src" loop controls class="w-full h-32 object-contain cursor-pointer"
+                    @click.stop="openMedia(src, i, work.images)" />
                   <img v-else :src="src" class="w-full h-32 object-contain cursor-pointer"
-                    @click.stop="openMedia(src)" />
+                    @click.stop="openMedia(src, i, work.images)" />
                 </template>
               </div>
             </div>
@@ -168,10 +187,10 @@ function rowIsActive(work) {
               </div>
               <div class="flex-1 grid grid-cols-3 gap-3">
                 <template v-for="(src, i) in work.images" :key="i">
-                  <video v-if="isVideo(src)" :src="src" muted loop class="w-full h-40 object-contain cursor-pointer"
-                    @click.stop="openMedia(src)" />
+                  <video v-if="isVideo(src)" :src="src" loop class="w-full h-40 object-contain cursor-pointer"
+                    @click.stop="openMedia(src, i, work.images)" />
                   <img v-else :src="src" class="w-full h-40 object-contain cursor-pointer"
-                    @click.stop="openMedia(src)" />
+                    @click.stop="openMedia(src, i, work.images)" />
                 </template>
               </div>
             </div>
@@ -183,7 +202,7 @@ function rowIsActive(work) {
     <!-- Fixed centered media overlay (Tabellen-Hover) -->
     <div v-if="hoveredWork && !selectedWork"
       class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
-      <video v-if="isVideo(hoveredWork.img)" :src="hoveredWork.img" autoplay muted loop
+      <video v-if="isVideo(hoveredWork.img)" :src="hoveredWork.img" autoplay loop
         class="max-w-xl max-h-[70vh] object-contain" />
       <NuxtImg v-else :src="hoveredWork.img" :alt="hoveredWork.title" class="max-w-xl max-h-[70vh] object-contain" />
     </div>
@@ -192,9 +211,23 @@ function rowIsActive(work) {
     <Transition name="fade">
       <div v-if="zoomedMedia" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 cursor-zoom-out"
         @click="zoomedMedia = null">
-        <video v-if="zoomedIsVideo" :src="zoomedMedia" autoplay muted loop
-          class="max-w-[90vw] max-h-[90vh] object-contain" />
-        <img v-else :src="zoomedMedia" class="max-w-[90vw] max-h-[90vh] object-contain" />
+
+        <!-- Navigation Arrows-->
+        <div class="relative flex items-center justify-center" @click.stop>
+          <button v-if="mediaIndex > 0" @click.stop="prevMedia"
+            class="absolute left-0 -translate-x-full top-1/2 -translate-y-1/2 text-white text-5xl cursor-pointer select-none pr-2">
+            <
+          </button>
+
+          <video v-if="zoomedIsVideo" :src="zoomedMedia" autoplay loop
+            class="max-w-[90vw] max-h-[90vh] object-contain" />
+          <img v-else :src="zoomedMedia" class="max-w-[90vw] max-h-[90vh] object-contain" />
+
+          <button v-if="mediaIndex < mediaList.length - 1" @click.stop="nextMedia"
+            class="absolute right-0 translate-x-full top-1/2 -translate-y-1/2 text-white text-5xl cursor-pointer select-none pl-2">
+            >
+          </button>
+        </div>
       </div>
     </Transition>
 </template>
