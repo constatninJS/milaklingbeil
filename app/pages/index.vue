@@ -144,6 +144,7 @@ function rowIsActive(work) {
 
       <!-- Rows -->
       <template v-for="work in sortedWorks" :key="work.id">
+        <NuxtImg v-if="!isVideo(work.img)" :src="work.img" preload hidden fit="inside" quality="80" width="600" height="600" />
         <div class="grid grid-cols-3 w-full pb-1 mb-1 uppercase py-2 cursor-pointer transition-colors duration-200"
           :class="rowIsActive(work) ? 'text-black' : 'text-black/25'" @mouseenter="hoveredWork = work"
           @mouseleave="hoveredWork = null" @click="toggleWork(work)">
@@ -170,7 +171,7 @@ function rowIsActive(work) {
                 <template v-for="(src, i) in work.images" :key="i">
                   <video v-if="isVideo(src)" :src="src" loop controls class="w-full h-32 object-contain cursor-pointer"
                     @click.stop="openMedia(src, i, work.images)" />
-                  <img v-else :src="src" class="w-full h-32 object-contain cursor-pointer"
+                  <NuxtImg v-else :src="src" class="w-full h-32 object-contain cursor-pointer"
                     @click.stop="openMedia(src, i, work.images)" />
                 </template>
               </div>
@@ -189,7 +190,7 @@ function rowIsActive(work) {
                 <template v-for="(src, i) in work.images" :key="i">
                   <video v-if="isVideo(src)" :src="src" loop class="w-full h-40 object-contain cursor-pointer"
                     @click.stop="openMedia(src, i, work.images)" />
-                  <img v-else :src="src" class="w-full h-40 object-contain cursor-pointer"
+                  <NuxtImg v-else :src="src" :quality="80" fit="inside" width="100" height="100" class="w-full h-40 object-contain cursor-pointer"
                     @click.stop="openMedia(src, i, work.images)" />
                 </template>
               </div>
@@ -204,7 +205,7 @@ function rowIsActive(work) {
       class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
       <video v-if="isVideo(hoveredWork.img)" :src="hoveredWork.img" autoplay loop
         class="max-w-xl max-h-[70vh] object-contain" />
-      <NuxtImg v-else :src="hoveredWork.img" :alt="hoveredWork.title" class="max-w-xl max-h-[70vh] object-contain" />
+      <NuxtImg v-else :src="hoveredWork.img" :alt="hoveredWork.title" fit="inside" quality="80" width="600" height="600" class="max-w-xl max-h-[70vh] object-contain" />
     </div>
 
     <!-- Lightbox -->
@@ -216,17 +217,16 @@ function rowIsActive(work) {
         <div class="relative flex items-center justify-center" @click.stop>
           <button v-if="mediaIndex > 0" @click.stop="prevMedia"
             class="absolute left-0 -translate-x-full top-1/2 -translate-y-1/2 text-white text-5xl cursor-pointer select-none pr-2">
-            <
-          </button>
+            < </button>
 
-          <video v-if="zoomedIsVideo" :src="zoomedMedia" autoplay loop
-            class="max-w-[90vw] max-h-[90vh] object-contain" />
-          <img v-else :src="zoomedMedia" class="max-w-[90vw] max-h-[90vh] object-contain" />
+              <video v-if="zoomedIsVideo" :src="zoomedMedia" autoplay loop
+                class="max-w-[90vw] max-h-[90vh] object-contain" />
+              <NuxtImg v-else :src="zoomedMedia" :quality="90" width="1200" height="1200" fit="inside" class="max-w-[90vw] max-h-[90vh] object-contain" />
 
-          <button v-if="mediaIndex < mediaList.length - 1" @click.stop="nextMedia"
-            class="absolute right-0 translate-x-full top-1/2 -translate-y-1/2 text-white text-5xl cursor-pointer select-none pl-2">
-            >
-          </button>
+              <button v-if="mediaIndex < mediaList.length - 1" @click.stop="nextMedia"
+                class="absolute right-0 translate-x-full top-1/2 -translate-y-1/2 text-white text-5xl cursor-pointer select-none pl-2">
+                >
+              </button>
         </div>
       </div>
     </Transition>
