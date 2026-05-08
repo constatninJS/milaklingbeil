@@ -190,7 +190,7 @@ function rowIsActive(work) {
                 <template v-for="(src, i) in work.images" :key="i">
                   <video v-if="isVideo(src)" :src="src" loop class="w-full h-40 object-contain cursor-pointer"
                     @click.stop="openMedia(src, i, work.images)" />
-                  <NuxtImg v-else :src="src" :quality="80" fit="inside" width="100" height="100" class="w-full h-40 object-contain cursor-pointer"
+                  <NuxtImg v-else :src="src" :quality="90" fit="inside" width="250" height="200" class="w-full h-40 object-contain cursor-pointer"
                     @click.stop="openMedia(src, i, work.images)" />
                 </template>
               </div>
@@ -203,7 +203,7 @@ function rowIsActive(work) {
     <!-- Fixed centered media overlay (Tabellen-Hover) -->
     <div v-if="hoveredWork && !selectedWork"
       class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
-      <video v-if="isVideo(hoveredWork.img)" :src="hoveredWork.img" autoplay loop
+      <video v-if="isVideo(hoveredWork.img)" :src="hoveredWork.img" autoplay loop muted
         class="max-w-xl max-h-[70vh] object-contain" />
       <NuxtImg v-else :src="hoveredWork.img" :alt="hoveredWork.title" fit="inside" quality="80" width="600" height="600" class="max-w-xl max-h-[70vh] object-contain" />
     </div>
