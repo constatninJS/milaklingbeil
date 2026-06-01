@@ -1,1 +1,3 @@
-# This is a portfolio website for my wonderful girlfriend. Happy Birthday <3
+# milaklingbeil.de
+
+This Website was a birthday present to my wonderful girlfriend. It also marked the first Website I launched myself.
