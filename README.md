@@ -21,4 +21,4 @@ This is the first website I designed, built and launched on my own, from the fir
 
 ## Author
 
-Built by [cofi](https://github.com/cofi).
+Built by [cofi](https://github.com/constatninJS).
